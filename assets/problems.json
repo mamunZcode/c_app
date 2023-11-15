@@ -1,0 +1,500 @@
+{
+  "chapters": [
+    {
+      "id": "01",
+      "title": "PLAY\nWITH\nPRINTF()",
+      "primaryColor": "009999",
+      "secondaryColor": "006666",
+      "questions": [
+        {
+          "id": 1,
+          "title": "Write the skeleton of a C program."
+        },
+        {
+          "id": 2,
+          "title": "Write a program to print the following output:\nHello world!!!"
+        },
+        {
+          "id": 3,
+          "title": "Write a code to print the following output:\nName:\t\tMr. X\nUniv:\t\tUniversity of Dhaka"
+        },
+        {
+          "id": 4,
+          "title": "Write a program to print the following output:\n            *\n           ***\n          *****\n         *******\n        *********\n         *******\n          *****\n           ***\n            *\n"
+        },
+        {
+          "id": 5,
+          "title": "Write a program to print the following output: [There are two blank lines in the middle]\nName:\t\tMr. DON\nCountry:\tBangladesh\n\n\nContact:\tmr.don@mycompany.com"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "title": "DATA TYPE\nAND\nVARIABLES",
+      "primaryColor": "6611bb",
+      "secondaryColor": "470c82",
+      "questions": [
+        {
+          "id": 6,
+          "title": "Take three integer variables a, b and c. Assign values to the variables- \n     a = 10, b = 20 and c = 30; Now print the sum of these three variables.\n"
+        },
+        {
+          "id": 7,
+          "title": "Write a program to print the following output:\nAscii value of ‘A’ is: ____\nAscii value of ‘@’ is: ____\nIn the blank space you should show the ascii code of the given characters.\n"
+        },
+        {
+          "id": 8,
+          "title": " Take four double variables x, y, z and avg. Assign values to x, y and z as you want. Now calculate the average of x, y and z and assign it to avg. Finally print the average value like- \nAverage of x, y and z is: ----- .\n"
+        },
+        {
+          "id": 9,
+          "title": "Print “Bangladesh” without quotation sign by using ascii values.\n[Use the given ascii values- B=66, a=97, n=110, g=103, l=108, a=97, d=100, e=101, s=115, h=104.]\n"
+        },
+        {
+          "id": 10,
+          "title": "Rahul got 65.00 on physics, 83.50 on mathematics, 85.75 on C programming and 67.50 on English. Now write a program to calculate the average of his marks on 4 subjects and print it up to 2 digit after the decimal point. [The result should look like: XX.XX]"
+        },
+        {
+          "id": 11,
+          "title": "You are given the  radius of a circle, r = 5.5.We know that, pi=3.1416. Now write a program to calculate the area of the given circle and print it up to 2 digit after the decimal point. [The result should look like: XX.XX]"
+        },
+        {
+          "id": 12,
+          "title": "Take two integer variables i = 0 and j = 0. Now write the output of the following program without running the code.\n\nint main(){\n\tint i = 0;\n\tint j = 0;\n\tj = i++ + ++i;\nprintf(“%d %d”,i,j);\n}"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "title": "USER\nINPUT\nSCANF()",
+      "primaryColor": "e67300",
+      "secondaryColor": "a05000",
+      "questions": [
+        {
+          "id": 13,
+          "title": "Take four integer variables a, b, x and y. Scan the values of the variables from user using scanf() function. Now print the output of the following equation:\n(a*b) + (x*y)\n"
+        },
+        {
+          "id": 14,
+          "title": "Take temperature of Dhaka city as input in celsius scale from the user using scanf() function and convert it to fahrenheit and print it.\n[Formula:  F = C(9/5) +32] \n"
+        },
+        {
+          "id": 15,
+          "title": "Take a small letter alphabet as input from the user and print the capital version of that letter. [If user gives input ‘a’ you should print ‘A’]"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "title": "APPLY\nYOUR\nCONDITIONS",
+      "primaryColor": "8ec520",
+      "secondaryColor": "75a31a",
+      "questions": [
+        {
+          "id": 16,
+          "title": "Suppose you are going to apply for admission in a college. If you got GPA 5 in SSC exam then you can apply for that college. Now give your GPA as input from the keyboard and print “YES” if you can apply otherwise print “NO”."
+        },
+        {
+          "id": 17,
+          "title": "Take a value from user and assume that it is the number of his math exam.\nNow you have to write a program which shows the grade depending on the given scale.\n(A+: 80-100, A: 70-79, A-:  60-69, B: 50-59, C: 40-49,  D :33-39 ,F :0-32)\n"
+        },
+        {
+          "id": 18,
+          "title": "You are going to open a bank account .  If your age is greater than 18 then you can open an account. Get your age by input and print “Yes” if you can open an account otherwise print “No”."
+        },
+        {
+          "id": 19,
+          "title": "Write a program which determines  whether a number is ODD or EVEN."
+        },
+        {
+          "id": 20,
+          "title": "Take an integer number as input from user and print “Yes” if the number is divisible by 3 and 5. And print “No” if the number is not."
+        },
+        {
+          "id": 21,
+          "title": " Take 3 integers from user using scanf() function and write a program to find the maximum one. "
+        },
+        {
+          "id": 22,
+          "title": "Take a small letter alphabet as input and print whether it is VOWEL or CONSONANT. "
+        },
+        {
+          "id": 23,
+          "title": "Write a program that takes an integer as input ( 1 - 12 ) and print the corresponding month name.[If user gives input ‘1’ you should print ‘January’]"
+        },
+        {
+          "id": 24,
+          "title": "You are given the rank and salary scale of a company-\n\nRank \t- salary\n1 \t- 2,50,000 BDT\n2 \t- 2,10,000 BDT\n3 \t- 1,50,000 BDT\n4 \t- 80,000 BDT\n>=5 \t- 50,000 BDT\n\nNow, take the rank as input from the user and print the salary of the given rank.  [If user gives input ‘3’ you should print ‘Your Salary: 1,50,000 BDT’]\n"
+        },
+        {
+          "id": 25,
+          "title": "Take two integers indicating the x and y coordinate of a two-dimensional graph paper where the center point is x = 0 and y = 0. Now print the quadrant of the given point. [If user gives input (4,5) you should print ‘First quadrant’; If user gives input (-4,-5) you should print ‘Third quadrant’ ]"
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "title": "MAGIC\nOF\nLOOP",
+      "primaryColor": "144606",
+      "secondaryColor": "0d2e04",
+      "questions": [
+        {
+          "id": 26,
+          "title": "Print the EVEN numbers between 1 to 100 using loop."
+        },
+        {
+          "id": 27,
+          "title": "Print the numbers between 100 to 200 which are completely divisible by 3 and 5."
+        },
+        {
+          "id": 28,
+          "title": " Write a program to print the following output using loop.\n*\n* *\n* * *\n* * * *"
+        },
+        {
+          "id": 29,
+          "title": " Take an integer as input and print it’s multiplication table up to 10. If user gives 5, your output should look like the following example-\n5 * 1 = 5\n5 * 2 = 10\n5 * 3 = 15.\n.\n.\n5 * 10 = 50\n"
+        },
+        {
+          "id": 30,
+          "title": "Write a program which will print the summation of the given series- \n101 + 99 + 97 + …….. + 3 + 1 = ?\n"
+        },
+        {
+          "id": 31,
+          "title": "Write a program to program to print the following output using loop-\n*\nBlank Line\n* * *\nBlank Line\n* * * * * \nBlank Line\n* * * * * *\n"
+        },
+        {
+          "id": 32,
+          "title": " Write a program to print the following output using loop.\n* * * *\n* * *\n* *\n*\n"
+        },
+        {
+          "id": 33,
+          "title": "Write a program to print the following output using loop-\n1 2 3 4 5\n1 2 3 4\n1 2 3\n1 2\n1\n"
+        },
+        {
+          "id": 34,
+          "title": "Write a program to display “A” to “Z”using loop ."
+        },
+        {
+          "id": 35,
+          "title": "Print the summation of squares of all numbers from 5 to 25.\n52 + 62 + 72 + 82......+ 242 + 252 = ? "
+        },
+        {
+          "id": 36,
+          "title": "Write a program which will take an integer N from user and print all the numbers between N to -32. Stop your program when user will give N= -1 as input."
+        },
+        {
+          "id": 37,
+          "title": ". Write the output of the following program-\n#include<stdio.h>\nint main(){\n    int i;\n    for(i = 10; i < 20; i++){\n        if(i % 2 == 0)\n            continue;\n        printf(\"%d\\n\",i);\n        if(i > 16)\n            break;\n    }\nreturn 0;\n}\n"
+        },
+        {
+          "id": 38,
+          "title": "Write a program which will take an integer N as input from user and print fibonacci series up to N. If user gives input N = 15, you should print-\n0 1 1 2 3 5 8 13\n"
+        },
+        {
+          "id": 39,
+          "title": "Write a program to print the following output using loop.\n * * * * *\n    * * * \n      * \n    * * *\n  * * * * *\n"
+        },
+        {
+          "id": 40,
+          "title": "write a program to print the following output in the given format using loop-\n1 1\n12 21\n123 321 \n1234 4321\n12345 54321\n"
+        },
+        {
+          "id": 41,
+          "title": " Find summation and average of all the numbers which are completely divisible by 3, 5 and 12 between 10 - 500. [Like 60 is divisible by all of those]"
+        },
+        {
+          "id": 42,
+          "title": "Write a program to produce the  following output using loop-\n1\n2 4\n3 6 9\n4 8 12 16\n5 10 15 20 25\n6 12 18 24 30 36 \n"
+        },
+        {
+          "id": 43,
+          "title": "Write a program which will display all the prime numbers  between 0 to N( N will be given by the user ).\nIf user gives N = 20, your code will print the following output-\n2  3  5  7  11  13  17  19\n"
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "title": "USES\nOF\nARRAY",
+      "primaryColor": "27594b",
+      "secondaryColor": "1f463b",
+      "questions": [
+        {
+          "id": 44,
+          "title": "Take an array of integer data type of size 10. Get input from user and store the values in the array and finally print the sum of those 10 integers."
+        },
+        {
+          "id": 45,
+          "title": "Say you are given the following array of integer data type- [-99,45,100,37,89,-327,245]. Now write a program which will find the biggest integer and print the integer with its index."
+        },
+        {
+          "id": 46,
+          "title": "Get your name from keyboard and print it with greeting like-\nHello Mr. “Your name”. \nPrint without quote and get your name in one word. \n"
+        },
+        {
+          "id": 47,
+          "title": "Take an array of integer data type of size 5. Scan the values from the user. Now print the number of how many integers are greater than 100. "
+        },
+        {
+          "id": 48,
+          "title": "Take an array of integer data type of size 5. Scan the values from the user. Now print the output like the following one-\nValues in array:\t10 25 20 15 30\nSum of odd values: \t40\nSum of even values: \t60"
+        },
+        {
+          "id": 49,
+          "title": "Take a two dimensional array of integer data type of size [3 * 3]. Take the values from the user using scanf(). Now print the average of all the values."
+        },
+        {
+          "id": 50,
+          "title": "Take a two dimensional array of integer data type of size [3 * 3]. Take the values from the user using scanf(). Now print the summation of the values of diagonal elements like the following one [1 + 5 + 9 = 15]-\n1    2    3\n4    5    6\n7    8    9"
+        },
+        {
+          "id": 51,
+          "title": "Take three arrays [A, B and AB] of float data type of size 5. Scan the values of of two arrays [A and B] from user. Now assign the summation of the two arrays to the AB. (AB[i] = A[i] + B[i]). \nFinally, print the values of AB array.\n"
+        },
+        {
+          "id": 52,
+          "title": "Take two arrays [A and B] of float data type of size 5. Scan the values of of two arrays from user. Now compare the averages of two arrays and print the largest average with the array name.[Avg: 55.55 -> A]"
+        },
+        {
+          "id": 53,
+          "title": "You are given the following array of integers-\n[1, 23, 10, 15, 17, 21, 44, 43, 53]. \nNow write a program which will print the prime numbers with its index.\n"
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "title": "FUN\nOF\nFUNCTION",
+      "primaryColor": "41913b",
+      "secondaryColor": "4ba745",
+      "questions": [
+        {
+          "id": 54,
+          "title": "Write a function that simply prints a message “Hello!! I am from inside of function” and call the function from main function."
+        },
+        {
+          "id": 55,
+          "title": "Write a function that takes two integers as input and prints their sum inside the function."
+        },
+        {
+          "id": 56,
+          "title": "Write  a function that takes an integer as input and prints EVEN if the number is divisible by 2 otherwise prints ODD. Call this function from the main function."
+        },
+        {
+          "id": 57,
+          "title": "Write a function that takes an integer as input and prints all of its divisors. Call this function from the main function."
+        },
+        {
+          "id": 58,
+          "title": "Suppose you are going to make a simple calculator. Your task is to prepare  four functions- add(), subtract(), multiply() and divide() . Each function takes two parameters and return the value after applying the corresponding action on those parameters."
+        },
+        {
+          "id": 59,
+          "title": "Write a function named findMax(). It takes three parameters and return the maximum value among the three parameters. Call this function from the main function."
+        },
+        {
+          "id": 60,
+          "title": "Write  a currency converter function named dollarToBDT(). It takes US Dollar as input in a float variable and return the amount of Bangladeshi Taka. [Change rate: 1 USD = 78.55 BDT]"
+        },
+        {
+          "id": 61,
+          "title": "Write a function that takes any real number and return its absolute value. If user gives -5 as parameter the function will return 5. \n"
+        },
+        {
+          "id": 62,
+          "title": " Write a function which calculates the  area of Bangladesh National Flag . The function takes only the length of the flag as parameter and returns the area of the flag. [Ratio of length and width is- Length:Width = 10 : 6]\n"
+        },
+        {
+          "id": 63,
+          "title": "Write a function named toUpperCase() which takes a small letter alphabet as input and return the capital version. If user gives ‘a’ as parameter the function will return ‘A’.\n"
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "title": "START\nWITH\nSTRING",
+      "primaryColor": "e7836f",
+      "secondaryColor": "b45847",
+      "questions": [
+        {
+          "id": 64,
+          "title": "Write a program to print the following output-\nEnter your name:\nMr. Jhon Snow [This line will be given by the user]\nHello!! Mr. Jhon Snow\n"
+        },
+        {
+          "id": 65,
+          "title": "Take a word from user and print the word in reverse order. [If user gives  “BANGLADESH”, your program should print “HSEDALGNAB”]"
+        },
+        {
+          "id": 66,
+          "title": "Find the length of a given string.[If user gives input “LovE”, you should print: 4]"
+        },
+        {
+          "id": 67,
+          "title": "Take a string as input from the user and print the every single character of it into a separate line. If user gives “DHAKA”, output should look like the following-\nD\nH\nA\nK\nA"
+        },
+        {
+          "id": 68,
+          "title": "Take three different string as input from the user(“We”, “ Love” and “ Bangladesh”). Now concate these three string and print it (“We Love Bangladesh”). [There is a leading space in “ Love” and “ Bangladesh”]"
+        },
+        {
+          "id": 69,
+          "title": "Write a program which takes a string of alphabet as input and replace all the characters with the 3rd immediate character of it. All the alphabets of the input string will be small letter. [If user gives input “abc” you should print “def”, if user gives input “xyz” you should print “abc”]"
+        },
+        {
+          "id": 70,
+          "title": "You are given a string mixed with uppercase and lowercase letters . Your task is to write a program which will flip the letters (UpperCase -> LowerCase, LowerCase -> UpperCase).  \nExample: \tINPUT: \t\tOUTPUT:\neLepHanT\t\tElephant\ncAt\t\t\tCat\nSuNDAY\t\tSunday"
+        },
+        {
+          "id": 71,
+          "title": " Write a program which will take a sentence as input and tell us how many words are there. [If user gives input “I love Bangladesh”, then the output should be: 3]"
+        },
+        {
+          "id": 72,
+          "title": "A string is palindrome if it seems same from the both side. Like “ABA”, “XXYXX”, “M” all are palindromes and “XY” is not a palindrome. Now write a program which will take a string as input from the user and print “YES, It is a palindrome” if it satisfies the condition otherwise print “No, It is not a palindrome”."
+        },
+        {
+          "id": 73,
+          "title": "Let’s take a string and you have to find how many alphabets are there and their repetitions. Case sensitive. \nEx: \t\tInput:\t\t\tOutput:\n\n\t\tAaaBBc\t\tA(1)B(2)a(2)c(1)\n"
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "title": "POINTER\nDE\nCOMPLEXITY",
+      "primaryColor": "2853a4",
+      "secondaryColor": "22478b",
+      "questions": [
+        {
+          "id": 74,
+          "title": "Take an integer variable named X and assign X = 5. Now print its memory address like the following output-\nMemory Address of X is : XXXXXX\n"
+        },
+        {
+          "id": 75,
+          "title": "Take two pointer variables of integer type named pX and pY. Now take another two variables of integer data type named X and Y. Assign X = 100 and Y = 200. Assign the address of X to pX and address of Y to pY. Now print the values of X and Y using pX and pY."
+        },
+        {
+          "id": 76,
+          "title": "Write the output of the following code without compiling- \n#include<stdio.h>\nint main(){\n    int a[]={5,10,15,20,25};\n    int *pA;\n    pA = &a[2];\n    printf(\"%d %d\",*pA, *(pA+2));\nreturn 0;\n}\n"
+        },
+        {
+          "id": 77,
+          "title": "Is there any error in the following program? If not what will be the output-\n#include<stdio.h>\nint main(){\n    int i;\n\n    double *pA;\n    double a[]={5,10,15,20,25};\n\n    pA = a;\n    for(i = 0; i < 5; i++){\n        printf(\"%.2lf \",*(pA+i));\n    }\nreturn 0;\n}\n"
+        },
+        {
+          "id": 78,
+          "title": "Take a integer variable named VAR and assign VAR = 500. Take a pointer variable named *ptr of integer type and assign the address of VAR to ptr. Then take another pointer to pointer variable named **pptr of integer type and assign the address of pointer variable ptr to pptr. Now print the value of VAR using the VAR , ptr and pptr respectively in three different lines. "
+        },
+        {
+          "id": 79,
+          "title": " Write down the output of the following program without running-\n#include <stdio.h>\nint main()\n{\n   char *str = \"Bangladesh\";\n   printf(\"%c %c %c\",*str, *(str + 3), *(str + 4));\n\n   return(0);\n}\n"
+        },
+        {
+          "id": 80,
+          "title": "Take an array of string named fruitNames and store four fruit names (“Mango”, “JackFruit”, “Banana”, “Litchi”). Now iterate the array using loop and print the names of the fruits each in a separate line. "
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "STRUCTURE\nAND\nUNION",
+      "primaryColor": "783b3b",
+      "secondaryColor": "683333",
+      "questions": [
+        {
+          "id": 81,
+          "title": "Create a simple structure named Student  that holds the following variables- \ni. id (integer)\nIi. cgpa (float)\nIii. name (string)\nNow create an instance of that structure named s1 and scan the values from the user. Finally print the id, cgpa and name which user entered. "
+        },
+        {
+          "id": 82,
+          "title": "Create a simple structure named Book that holds the following data fields- \ni. id (integer)\nIi. title (string)\nIii. author(string)\nNow create two structure variables of Book type named book1 and book2. Set the following information for the books-\nFor book1:\nid: 101 \ntitle: C Programming Hand Note\nauthor: Mukla.C\n\nFor book2:\nid: 102\ntitle: Programming with Fun\nauthor: Joy Billah\n\nFinally, print all the information of the two books. \n"
+        },
+        {
+          "id": 83,
+          "title": "Create a structure named TanisBall where we have two fields- color (string) and weight (float). Now create a pointer variable of structure TanisBall named myBall. Scan the field values for myBall from user and finally print the information of myBall using that pointer variable myBall."
+        },
+        {
+          "id": 84,
+          "title": "Create a structure named Writer with two fields- name (string) and genre (string). Then create an array of Writer named writerRecords. Insert the following records into the array-\ni. name- Mukla.C; genre- Technical \nii. name- Mostasim Billah; genre- Technical\niii. name- Mahady Joy; genre- Technical\nFinally, print the records of the array by iterating the array using loop. \n"
+        },
+        {
+          "id": 85,
+          "title": "Create a structure named Product with following two fields- \ni. name (string)\nii. price (double)\nThen create a function named printProductInfo() which takes a parameter of Product type and print the information of that Product. Finally, in main function create a variable of structure Product named myProduct and call the printProductInfo() function passing myProduct as the parameter."
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "BASIC\nOF\nFILE I/O",
+      "primaryColor": "b97907",
+      "secondaryColor": "b17407",
+      "questions": [
+        {
+          "id": 86,
+          "title": "Write a program that opens a file named myFile.txt on write mode and write 100(integer) into that file."
+        },
+        {
+          "id": 87,
+          "title": "Write a program which will delete all the text from a text file and write “LOVE” on that file. "
+        },
+        {
+          "id": 88,
+          "title": "Write a program which will create a file named myFile.txt and write “We LovE” on that file. Then read the file and print the text of that file into console. Finally, append “Our Country” with the previous text of that file and print the whole text again into console."
+        },
+        {
+          "id": 89,
+          "title": "Create a text file in your computer and write 10 integers in 10 separate lines. Now write a program which will open the file and read that 10 integers. Finally print the average of that ten integers. "
+        },
+        {
+          "id": 90,
+          "title": " Create a text file in your computer and write a paragraph about INTERNET on that file. Then write a program which will open that file and print the whole paragraph into console."
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "MATH\nAND\nCODING",
+      "primaryColor": "4f4a4a",
+      "secondaryColor": "3f3b3b",
+      "questions": [
+        {
+          "id": 91,
+          "title": "Write a program which takes an integer as input and print “YES, Prime” if the number is prime otherwise “NO”."
+        },
+        {
+          "id": 92,
+          "title": "Write a program which takes the coordinates of two points (x1, y1) and (x2, y2) from the user and print the distance of those two points."
+        },
+        {
+          "id": 93,
+          "title": "Write a program which will take the length of three sides of a triangle and print the measures of the three angles."
+        },
+        {
+          "id": 94,
+          "title": "Read two numbers A and B from user. Calculate and print the sum of their factorials. Be careful, because the result may have more than 15 digits."
+        },
+        {
+          "id": 95,
+          "title": "A dog eats just half of its supply of food in one day. Write a program that scans the initial capacity of the food supply (in Kg), and calculate how many days will pass before the dog eat all the supply food until left 1 Kg or less."
+        },
+        {
+          "id": 96,
+          "title": "Take a decimal number as input and print the binary version of that number."
+        },
+        {
+          "id": 97,
+          "title": "Write a program which will find the greatest common divisor of two numbers. If user gives input 5 and 30, your output should be 5."
+        },
+        {
+          "id": 98,
+          "title": "Take two numbers of 20 digits and print the sum of those two numbers."
+        },
+        {
+          "id": 99,
+          "title": "Write a program to calculate the nearest integer number of the square root value of a number. User will give the number as input. Your program will find the square root value of that number and print the nearest integer of that value."
+        },
+        {
+          "id": 100,
+          "title": "Find the largest prime number between 100000 to 500000."
+        }
+      ]
+    }
+  ]
+}
