@@ -1,12 +1,8 @@
 import 'package:c_app/screen/registration.dart';
-// import 'package:firebase_auth_demo/screen/registration.dart';
-// import 'package:firebase_auth_demo/service/firebase_auth_methods.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../service/firebase_auth_methods.dart';
-
 class LoginScreen extends StatefulWidget {
   static const id = 'login_screen';
 

@@ -1,9 +1,5 @@
-// import 'package:firebase_auth_demo/component/code_viewer.dart';
-// import 'package:firebase_auth_demo/model/problems.dart';
-// import 'package:firebase_auth_demo/state/all_problems.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../component/code_viewer.dart';
 import '../model/problems.dart';
 import '../state/all_problems.dart';
