@@ -45,7 +45,7 @@ class _CodeViewerState extends State<CodeViewer>
     if (kIsWeb) {
       Map<String, String> header = {
         "Authorization":
-      "token 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",
+        "token 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",
         "Accept": "application/vnd.github.v3.raw"
       };
       final uri = Uri.parse(
