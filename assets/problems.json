@@ -60,7 +60,7 @@
         },
         {
           "id": 12,
-          "title": "Take two integer variables i = 0 and j = 0. Now write the output of the following program without running the code.\n\nint main(){\n\tint i = 0;\n\tint j = 0;\n\tj = i++ + ++i;\nprintf(“%d %d”,i,j);\n}"
+          "title": "Take two integer variables <b>i = 0</b> and j = 0. Now write the output of the following program without running the code.\n\nint main(){\n\tint i = 0;\n\tint j = 0;\n\tj = i++ + ++i;\nprintf(“%d %d”,i,j);\n}"
         }
       ]
     },

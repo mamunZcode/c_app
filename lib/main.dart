@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 import 'service/firebase_auth_methods.dart';
+import 'screen/loginui/loginScreen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -55,6 +56,7 @@ class MyApp extends StatelessWidget {
         HomeScreen.id: (context) => HomeScreen(),
         LoginScreen.id: (context) => LoginScreen(),
         SettingScreen.id: (context) => SettingScreen(),
+        loginScreen.id: (context) =>loginScreen(),
       },
     );
   }
@@ -72,6 +74,6 @@ class AuthWrapper extends StatelessWidget {
     if (firebaseUser != null) {
       return const HomeScreen();
     }
-    return LoginScreen();
+    return loginScreen();
   }
 }

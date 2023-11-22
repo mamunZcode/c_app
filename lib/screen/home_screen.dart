@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //if directory does not exists download and extract zip
     Map<String, String> header = {
       "Authorization":
-      "token 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",
+      "token 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",
     };
     const url =
         'https://api.github.com/repos/mostasim/101CProblemSolution/zipball/';
@@ -71,10 +71,10 @@ class _HomeScreenState extends State<HomeScreen> {
       directory.listSync().forEach((element) {
         if (element is Directory) {
           if (element.path.contains("mostasim-101CProblemSolution-")) {
-            element.renameSync('${directory.path}/101CProblemSolution');
+            element.renameSync('${directory.path}/');
           }
         } else if (element is File) {
-          if (element.path.contains("temp.zip")) {
+          if (element.path.contains("temp.z101CProblemSolutionip")) {
             element.deleteSync();
             debugPrint("temp.zip deleted");
           }

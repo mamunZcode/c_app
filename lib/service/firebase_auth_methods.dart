@@ -1,4 +1,5 @@
 import 'package:c_app/screen/home_screen.dart';
+import 'package:c_app/screen/loginui/loginScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 // import 'package:firebase_auth_demo/screen/home_screen.dart';
 // import 'package:firebase_auth_demo/screen/login_screen.dart';
@@ -98,7 +99,7 @@ class FirebaseAuthMethods {
       await _auth.signOut();
       if (context.mounted) {
         Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => LoginScreen()));
+            MaterialPageRoute(builder: (context) => loginScreen()));
       }
     } on FirebaseAuthException catch (e) {
       // showSnackBar(context, e.message!); // Displaying the error message
