@@ -1,11 +1,9 @@
 import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_highlighter/flutter_highlighter.dart';
 import 'package:flutter_highlighter/theme_map.dart';
-import 'package:flutter_highlighter/themes/androidstudio.dart';
 import 'package:flutter_highlighter/themes/default.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:http/http.dart' as http;
@@ -43,16 +41,12 @@ class _CodeViewerState extends State<CodeViewer>
 
   Future<String> loadCodeFile() async {
     if (kIsWeb) {
-      Map<String, String> header = {
-        "Authorization":
-      "token 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",
-        "Accept": "application/vnd.github.v3.raw"
-      };
+
       final uri = Uri.parse(
-          'https://api.github.com/repos/mostasim/101CProblemSolution/contents/${widget.fileName}.c');
+          'https://raw.githubusercontent.com/mamunZcode/100cProblems/main/${widget.fileName}.c');
       String fileContent = '';
       try {
-        final response = await http.get(uri, headers: header);
+        final response = await http.get(uri);
 
         if (response.statusCode == 200) {
           setState(() {

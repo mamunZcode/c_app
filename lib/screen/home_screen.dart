@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
-
 import '../service/firebase_auth_methods.dart';
 import 'cart_list.dart';
+import 'package:c_app/service/firestore_service.dart';
 
 class HomeScreen extends StatefulWidget {
   static const id = 'home_screen';
@@ -20,15 +20,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  FirestoreService firestoreService = FirestoreService();
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   ViewType viewType = ViewType.grid;
-
   Future<void> downloadAndExtractZip() async {
     // Don't run this function if you're on the web
     if (kIsWeb) {
       return;
     }
-
     final directoryPath = await getApplicationDocumentsDirectory();
     final filePath = '${directoryPath.path}/101CProblemSolution';
     final directory = Directory(filePath);
@@ -36,24 +35,16 @@ class _HomeScreenState extends State<HomeScreen> {
     if (directory.existsSync()) {
       debugPrint("The directory exists");
       return;
-    }
-    //if directory does not exists download and extract zip
-    Map<String, String> header = {
-      "Authorization":
-      "token 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",
-    };
+    }    //if directory does not exists download and extract zip
     const url =
-        'https://api.github.com/repos/mostasim/101CProblemSolution/zipball/';
-    final response = await http.get(Uri.parse(url), headers: header);
-
+        'https://github.com/mamunZcode/100cProblems/archive/refs/heads/main.zip';
+    final response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
       final Uint8List bytes = response.bodyBytes;
-
       // Create a temporary directory to extract the contents
       final directory = await getApplicationDocumentsDirectory();
       final tempZipFile = File('${directory.path}/temp.zip');
       await tempZipFile.writeAsBytes(bytes);
-
       // Extract the zip file
       final zipFile = ZipDecoder().decodeBytes(tempZipFile.readAsBytesSync());
       for (final file in zipFile) {
@@ -80,103 +71,106 @@ class _HomeScreenState extends State<HomeScreen> {
           }
         }
       });
-
       print('Zip file downloaded and extracted successfully.');
     } else {
       print('Failed to download the zip file.');
     }
   }
-
   @override
   Widget build(BuildContext context) {
-    return (Scaffold(
-      key: _scaffoldKey,
-      appBar: AppBar(
-        title: const Text(
-          '101 C Problems',
-          style: TextStyle(fontFamily: 'mono',),
-        ),
-        // Add a menu button to the AppBar
-        actions: [
-          IconButton(
-            icon: (viewType == ViewType.grid)
-                ? const Icon(Icons.grid_view)
-                : const Icon(Icons.view_list),
-            onPressed: () {
-              setState(() {
-                viewType =
-                    (viewType == ViewType.grid) ? ViewType.list : ViewType.grid;
-              });
-            },
+    return Consumer<FirebaseAuthMethods>(builder: (context, auth, child) {
+      return
+      (Scaffold(
+        key: _scaffoldKey,
+        appBar: AppBar(
+          title: Text(
+            '101 C Problems' +'\n'+'${auth.user.email}',
+            style: TextStyle(fontFamily: 'mono',),
           ),
-          IconButton(
+          // Add a menu button to the AppBar
+          actions: [
+            IconButton(
+              icon: (viewType == ViewType.grid)
+                  ? const Icon(Icons.grid_view)
+                  : const Icon(Icons.view_list),
               onPressed: () {
-                _scaffoldKey.currentState?.openEndDrawer();
-              },
-              icon: Icon(Icons.menu_rounded))
-        ],
-      ),
-      endDrawer: Drawer(
-        child: ListView(
-          children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.white60,
-              ),
-              curve: Curves.easeInQuad,
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.menu_rounded,
-                    color: Colors.grey,
-                    size: 48,
-                  ),
-                  Text(
-                    '101 C Problems',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 24,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            ListTile(
-              title: const Text('Settings'),
-              onTap: () {
-                Navigator.pushNamed(context, SettingScreen.id);
+                setState(() {
+                  viewType =
+                  (viewType == ViewType.grid) ? ViewType.list : ViewType.grid;
+                });
               },
             ),
-            ListTile(
-              title: Text('Devloper Info'),
-              onTap: (){
-
-              },
-            ),
-            ListTile(
-              title: const Text('Sign Out'),
-              onTap: () {
-                context.read<FirebaseAuthMethods>().signOut(context);
-              },
-            ),
+            IconButton(
+                onPressed: () {
+                  _scaffoldKey.currentState?.openEndDrawer();
+                },
+                icon: Icon(Icons.menu_rounded))
           ],
         ),
-      ),
-      body: FutureBuilder(
-        future: downloadAndExtractZip(),
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          } else if (snapshot.hasError) {
-            return const Center(child: Text('Error fetching data'));
-          } else {
-            return CartList(viewType: viewType);
-          }
-        },
-      ),
-    ));
+        endDrawer: Drawer(
+          child: ListView(
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.white60,
+                ),
+                curve: Curves.easeInQuad,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.menu_rounded,
+                      color: Colors.grey,
+                      size: 48,
+                    ),
+                    Text(
+                      '101 C Problems',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              ListTile(
+                title: const Text('Settings'),
+                onTap: () {
+                  Navigator.pushNamed(context, SettingScreen.id);
+                },
+              ),
+              ListTile(
+                title: Text('Devloper Info'),
+                onTap: () {
+                  Navigator.pushNamed(context, 'developer_screen');
+                },
+              ),
+              ListTile(
+                title: const Text('Sign Out'),
+                onTap: () {
+                  context.read<FirebaseAuthMethods>().signOut(context);
+                },
+              ),
+            ],
+          ),
+        ),
+        body: FutureBuilder(
+          future: downloadAndExtractZip(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(child: CircularProgressIndicator());
+            } else if (snapshot.hasError) {
+              return const Center(child: Text('Error fetching data'));
+            } else {
+              return CartList(viewType: viewType);
+            }
+          },
+        ),
+      )
+      );
+    },
+    );
   }
-
   @override
   void initState() {
     super.initState();
@@ -184,11 +178,9 @@ class _HomeScreenState extends State<HomeScreen> {
         .read<FirebaseAuthMethods>()
         .user; // Add a random string to the list
     var userId = currentUser.uid;
-
     // context.read<MyItemList>().listenToDocuments(userId);
   }
 }
-
 class ViewType {
   static const list = ViewType._('list');
   static const grid = ViewType._('grid');

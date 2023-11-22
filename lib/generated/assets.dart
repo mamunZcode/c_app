@@ -7,6 +7,7 @@ class Assets {
   static const String assetsIconGoogle = 'assets/icon_google.png';
   static const String assetsLogo = 'assets/logo.png';
   static const String assetsMain = 'assets/main.c';
+  static const String assetsMamun = 'assets/mamun.jpeg';
   static const String assetsPrimaryBg = 'assets/primaryBg.png';
   static const String assetsProblems = 'assets/problems.json';
   static const String componentCodeViewer = 'lib/component/code_viewer.dart';
@@ -14,13 +15,14 @@ class Assets {
   static const String generatedAssets = 'lib/generated/assets.dart';
   static const String libFirebaseOptions = 'lib/firebase_options.dart';
   static const String libMain = 'lib/main.dart';
-  static const String loginuiConfig = 'lib/screen/loginui/config.dart';
+  static const String loginuiColor = 'lib/screen/loginui/color.dart';
   static const String loginuiLogin1 = 'lib/screen/loginui/login1.dart';
   static const String loginuiLogin2 = 'lib/screen/loginui/login2.dart';
   static const String loginuiLogin3 = 'lib/screen/loginui/login3.dart';
   static const String loginuiLoginScreen = 'lib/screen/loginui/loginScreen.dart';
   static const String modelProblems = 'lib/model/problems.dart';
   static const String screenCartList = 'lib/screen/cart_list.dart';
+  static const String screenDevloper = 'lib/screen/devloper.dart';
   static const String screenHomeScreen = 'lib/screen/home_screen.dart';
   static const String screenItemView = 'lib/screen/item_view.dart';
   static const String screenLoginScreen = 'lib/screen/login_screen.dart';
@@ -28,6 +30,7 @@ class Assets {
   static const String screenSettingScreen = 'lib/screen/setting-screen.dart';
   static const String serviceFirebaseAuthMethods = 'lib/service/firebase_auth_methods.dart';
   static const String serviceFirestoreService = 'lib/service/firestore_service.dart';
+  static const String serviceGoogleSignIn = 'lib/service/googleSignIn.dart';
   static const String stateAllProblems = 'lib/state/all_problems.dart';
   static const String stateCartModel = 'lib/state/cart_model.dart';
   static const String stateFirestoreItemList = 'lib/state/firestore_item_list.dart';

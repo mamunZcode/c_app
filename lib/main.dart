@@ -1,3 +1,4 @@
+import 'package:c_app/screen/devloper.dart';
 import 'package:c_app/screen/home_screen.dart';
 import 'package:c_app/screen/login_screen.dart';
 import 'package:c_app/screen/registration.dart';
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'C-Learner App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'comic',
@@ -57,6 +58,7 @@ class MyApp extends StatelessWidget {
         LoginScreen.id: (context) => LoginScreen(),
         SettingScreen.id: (context) => SettingScreen(),
         loginScreen.id: (context) =>loginScreen(),
+        Devloper.id:(context) => Devloper(),
       },
     );
   }

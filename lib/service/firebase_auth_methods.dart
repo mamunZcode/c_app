@@ -1,15 +1,11 @@
 import 'package:c_app/screen/home_screen.dart';
 import 'package:c_app/screen/loginui/loginScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-// import 'package:firebase_auth_demo/screen/home_screen.dart';
-// import 'package:firebase_auth_demo/screen/login_screen.dart';
 import 'package:flutter/material.dart';
-
-import '../screen/login_screen.dart';
-
+// import 'package:google_sign_in/google_sign_in.dart';
 class FirebaseAuthMethods {
+  // final GoogleSignIn _googleSignIn = GoogleSignIn();
   final FirebaseAuth _auth;
-
   FirebaseAuthMethods(this._auth);
 
   // FOR EVERY FUNCTION HERE
@@ -42,7 +38,7 @@ class FirebaseAuthMethods {
       if (!context.mounted) return;
       // await sendEmailVerification(context);
       if (!context.mounted) return;
-      Navigator.pushNamed(context, LoginScreen.id);
+      Navigator.pushNamed(context, loginScreen.id);
     } on FirebaseAuthException catch (e) {
       // if you want to display your own custom error message
       if (e.code == 'weak-password') {
@@ -53,7 +49,6 @@ class FirebaseAuthMethods {
       // showSnackBar(context, e.message!); // Displaying the usual firebase error message
     }
   }
-
   // EMAIL LOGIN
   Future<void> loginWithEmail({
     required String email,
@@ -82,7 +77,6 @@ class FirebaseAuthMethods {
         snackBar(context, e.message!); // Displaying the error message
     }
   }
-
   // EMAIL VERIFICATION
   Future<void> sendEmailVerification(BuildContext context) async {
     try {
@@ -122,4 +116,35 @@ class FirebaseAuthMethods {
       content: Text(s),
     ));
   }
+  // Future<void> signInWithGoogle() async {
+  //   try {
+  //     // Trigger Google Sign In
+  //     final GoogleSignInAccount ? googleSignInAccount =
+  //     await _googleSignIn.signIn();
+  //
+  //     // If the user cancels the sign-in process
+  //     if (googleSignInAccount == null) return null;
+  //
+  //     // Obtain GoogleSignInAuthentication and authenticate with Firebase
+  //     final GoogleSignInAuthentication googleSignInAuthentication =
+  //     await googleSignInAccount.authentication;
+  //     final AuthCredential credential = GoogleAuthProvider.credential(
+  //       accessToken: googleSignInAuthentication.accessToken,
+  //       idToken: googleSignInAuthentication.idToken,
+  //     );
+  //
+  //     // Sign in to Firebase using Google credentials
+  //     final UserCredential authResult =
+  //     await _auth.signInWithCredential(credential);
+  //     final User? user = authResult.user;
+  //
+  //   } catch (e) {
+  //     print(e.toString());
+  //     return null;
+  //   }
+  // }
+
+
+
+
 }
