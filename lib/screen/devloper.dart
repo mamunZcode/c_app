@@ -53,7 +53,7 @@ class _DevloperState extends State<Devloper> {
                 padding: EdgeInsets.only(right: 8.0, left: 8.0),
                 child: Icon(Icons.drive_file_rename_outline),
               ),
-              Text('MD Muntasir Mamun'),
+              Text('MD:Muntasir Mamun'),
             ],
           ),
           SizedBox(
