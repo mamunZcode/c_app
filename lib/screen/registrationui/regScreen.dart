@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
-import 'login1.dart';
-import 'login2.dart';
-import 'login3.dart';
+import 'reg1.dart';
+import 'reg2.dart';
+import 'reg3.dart';
 
 
-class loginScreen extends StatefulWidget {
-
-  static const id = 'loginScreen';
-
+class regScreen extends StatefulWidget {
+  static const id = 'regScreen';
   @override
-  State<loginScreen> createState() => _loginScreenState();
+  State<regScreen> createState() => _regScreenState();
 }
-
-class _loginScreenState extends State<loginScreen> {
+class _regScreenState extends State<regScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +26,7 @@ class _loginScreenState extends State<loginScreen> {
                 left: 59,
                 child: Container(
                   child: Text(
-                    'Login To APP',
+                    'Register To APP',
                     style: TextStyle(
                         fontSize: 48,
                         fontFamily: 'Poppins-Medium',
@@ -37,9 +34,9 @@ class _loginScreenState extends State<loginScreen> {
                         color: Colors.white),
                   ),
                 )),
-            Positioned(top: 290, right: 0, bottom: 0, child: login1()),
-            Positioned(top: 318, right: 0, bottom: 28, child: login2()),
-            Positioned(top: 320, right: 0, bottom: 48, child: login3()),
+            Positioned(top: 290, right: 0, bottom: 0, child: reg1()),
+            Positioned(top: 318, right: 0, bottom: 28, child: reg2()),
+            Positioned(top: 320, right: 0, bottom: 48, child: reg3()),
           ],
         ),
       ),

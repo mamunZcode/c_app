@@ -14,7 +14,6 @@ class Registration extends StatefulWidget {
 
 class _RegistrationState extends State<Registration> {
   final TextEditingController emailController = TextEditingController();
-
   final TextEditingController passController = TextEditingController();
 
   void register() {

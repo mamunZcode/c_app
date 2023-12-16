@@ -2,6 +2,7 @@ import 'package:c_app/screen/devloper.dart';
 import 'package:c_app/screen/home_screen.dart';
 import 'package:c_app/screen/login_screen.dart';
 import 'package:c_app/screen/registration.dart';
+import 'package:c_app/screen/registrationui/regScreen.dart';
 import 'package:c_app/screen/setting-screen.dart';
 import 'package:c_app/state/all_problems.dart';
 import 'package:c_app/state/cart_model.dart';
@@ -53,11 +54,10 @@ class MyApp extends StatelessWidget {
       home: const AuthWrapper(),
       // initialRoute: LoginScreen.id,
       routes: {
-        Registration.id: (context) => Registration(),
-        HomeScreen.id: (context) => HomeScreen(),
-        LoginScreen.id: (context) => LoginScreen(),
-        SettingScreen.id: (context) => SettingScreen(),
+        regScreen.id:(context) => regScreen(),
         loginScreen.id: (context) =>loginScreen(),
+        HomeScreen.id: (context) => HomeScreen(),
+        SettingScreen.id: (context) => SettingScreen(),
         Devloper.id:(context) => Devloper(),
       },
     );

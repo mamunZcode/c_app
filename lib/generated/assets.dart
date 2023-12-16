@@ -16,11 +16,16 @@ class Assets {
   static const String libFirebaseOptions = 'lib/firebase_options.dart';
   static const String libMain = 'lib/main.dart';
   static const String loginuiColor = 'lib/screen/loginui/color.dart';
+  static const String loginuiConfig = 'lib/screen/loginui/config.dart';
   static const String loginuiLogin1 = 'lib/screen/loginui/login1.dart';
   static const String loginuiLogin2 = 'lib/screen/loginui/login2.dart';
   static const String loginuiLogin3 = 'lib/screen/loginui/login3.dart';
   static const String loginuiLoginScreen = 'lib/screen/loginui/loginScreen.dart';
   static const String modelProblems = 'lib/model/problems.dart';
+  static const String registrationuiReg1 = 'lib/screen/registrationui/reg1.dart';
+  static const String registrationuiReg2 = 'lib/screen/registrationui/reg2.dart';
+  static const String registrationuiReg3 = 'lib/screen/registrationui/reg3.dart';
+  static const String registrationuiRegScreen = 'lib/screen/registrationui/regScreen.dart';
   static const String screenCartList = 'lib/screen/cart_list.dart';
   static const String screenDevloper = 'lib/screen/devloper.dart';
   static const String screenHomeScreen = 'lib/screen/home_screen.dart';

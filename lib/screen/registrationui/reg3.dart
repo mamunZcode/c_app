@@ -1,35 +1,27 @@
 import 'package:c_app/service/firebase_auth_methods.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'color.dart';
 import 'package:provider/provider.dart';
+import 'package:c_app/screen/loginui/color.dart';
 
 
 
-class login3 extends StatefulWidget {
+class reg3 extends StatefulWidget {
   @override
-  State<login3> createState() => _login3();
+  State<reg3> createState() => _reg3();
 }
 
-class _login3 extends State<login3> {
-
+class _reg3 extends State<reg3> {
   TextEditingController emailController =  TextEditingController();
   TextEditingController passController =  TextEditingController();
-
-
-void login(){
-  context.read<FirebaseAuthMethods>().loginWithEmail(
-      email: emailController.value.text.trim(),
-      password: passController.value.text.trim(),
-      context: context);
-
-}
-
-
+  void register() {
+    context.read<FirebaseAuthMethods>().signUpWithEmail(
+        email: emailController.value.text,
+        password: passController.value.text,
+        context: context);
+  }
   @override
   Widget build(BuildContext context) {
-
-
     return Container(
       height: 584,
       width: MediaQuery.of(context).size.width,
@@ -39,11 +31,13 @@ void login(){
             left: 59,
             top: 99,
             child: Text(
-              'Username',
+              'Email or Username',
               style: TextStyle(
                   fontFamily: 'Poppins-Medium',
                   fontSize: 24,
-                  fontWeight: FontWeight.w500),
+                  fontWeight: FontWeight.w500,
+                color: Colors.white
+              ),
             ),
           ),
           Positioned(
@@ -52,10 +46,11 @@ void login(){
               child: Container(
                 width: 310,
                 child: TextField(
+                  style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
                     border: UnderlineInputBorder(),
-                    hintText: 'Enter User ID or Email',
-                    hintStyle: TextStyle(color: hintText),
+                    hintText: 'Enter your Email',
+                    hintStyle: TextStyle(color: Colors.white),
                   ),
                   controller: emailController,
                 ),
@@ -68,7 +63,9 @@ void login(){
               style: TextStyle(
                   fontFamily: 'Poppins-Medium',
                   fontSize: 24,
-                  fontWeight: FontWeight.w500),
+                  fontWeight: FontWeight.w500,
+                  color: Colors.white
+              ),
             ),
           ),
           Positioned(
@@ -77,10 +74,11 @@ void login(){
               child: Container(
                 width: 310,
                 child: TextField(
+                  style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
                     border: UnderlineInputBorder(),
                     hintText: 'Enter Password',
-                    hintStyle: TextStyle(color: hintText),
+                    hintStyle: TextStyle(color: Colors.white),
 
                   ),
                   controller: passController,
@@ -102,9 +100,9 @@ void login(){
                 child: Padding(
                   padding: const EdgeInsets.only(top: 6.0),
                   child: GestureDetector(
-                    onTap: login,
+                    onTap: register,
                     child: Text(
-                      'Sign In',
+                      'Sign UP',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.white,
@@ -131,10 +129,10 @@ void login(){
                   padding: const EdgeInsets.only(top: 6.0),
                   child: GestureDetector(
                     onTap: (){
-                      Navigator.pushNamed(context, 'regScreen');
+                      Navigator.pushNamed(context, 'loginScreen');
                     },
                     child: Text(
-                      'Registration here',
+                      'Login Here',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.white,
@@ -154,53 +152,53 @@ void login(){
                 color: inputBorder,
               )),
           Positioned(
-              top: 482,
-              left: 120,
-              right: 120,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  GestureDetector(
-                    child: Container(
-                      width: 59,
-                      height: 48,
-                      decoration: BoxDecoration(
-                          border: Border.all(color: signInBox),
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(20),
-                              bottomRight: Radius.circular(20))),
-                      child: Image.asset(
-                        'assets/icon_google.png',
-                        width: 20,
-                        height: 21,
-                      ),
+            top: 482,
+            left: 120,
+            right: 120,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                GestureDetector(
+                  child: Container(
+                    width: 59,
+                    height: 48,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: signInBox),
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(20),
+                            bottomRight: Radius.circular(20))),
+                    child: Image.asset(
+                      'assets/icon_google.png',
+                      width: 20,
+                      height: 21,
                     ),
                   ),
-                  Text(
-                    'or',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontFamily: 'Poppins-Regular',
-                        color: hintText),
-                  ),
-                  GestureDetector(
-                    child: Container(
-                      width: 59,
-                      height: 48,
-                      decoration: BoxDecoration(
-                          border: Border.all(color: signInBox),
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(20),
-                              bottomRight: Radius.circular(20))),
-                      child: Image.asset(
-                        'assets/icon_apple .png',
-                        width: 20,
-                        height: 21,
-                      ),
+                ),
+                Text(
+                  'or',
+                  style: TextStyle(
+                      fontSize: 18,
+                      fontFamily: 'Poppins-Regular',
+                      color: hintText),
+                ),
+                GestureDetector(
+                  child: Container(
+                    width: 59,
+                    height: 48,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: signInBox),
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(20),
+                            bottomRight: Radius.circular(20))),
+                    child: Image.asset(
+                      'assets/icon_apple .png',
+                      width: 20,
+                      height: 21,
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
+            ),
           ),
         ],
       ),

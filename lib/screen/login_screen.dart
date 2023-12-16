@@ -14,12 +14,12 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passController = TextEditingController();
 
-  void login() {
-    print('login');
+  void login(){
     context.read<FirebaseAuthMethods>().loginWithEmail(
         email: emailController.value.text.trim(),
         password: passController.value.text.trim(),
         context: context);
+
   }
 
   @override
