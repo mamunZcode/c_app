@@ -9,7 +9,7 @@ class MyItemList extends ChangeNotifier {
 
   List<MyDocument> get documents => _documents;
 
-  // FirestoreService firestoreService = FirestoreService();
+  // FirestoreService firestormService = FirestoreService();
 
   Future<String> loadData() async {
     return await rootBundle.loadString('assets/problems.json');

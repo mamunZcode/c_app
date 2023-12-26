@@ -48,7 +48,6 @@ class FirestoreService {
     }).toList();
     return documents;
   }
-
   Future<List<MyDocument>> refreshData(String userId) async {
     var docs = await getDocuments(userId);
     List<MyDocument> myDocs = [];

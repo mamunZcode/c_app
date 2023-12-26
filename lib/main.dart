@@ -1,7 +1,5 @@
 import 'package:c_app/screen/devloper.dart';
 import 'package:c_app/screen/home_screen.dart';
-import 'package:c_app/screen/login_screen.dart';
-import 'package:c_app/screen/registration.dart';
 import 'package:c_app/screen/registrationui/regScreen.dart';
 import 'package:c_app/screen/setting-screen.dart';
 import 'package:c_app/state/all_problems.dart';

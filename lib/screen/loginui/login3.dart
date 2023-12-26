@@ -4,32 +4,22 @@ import 'package:flutter/rendering.dart';
 import 'color.dart';
 import 'package:provider/provider.dart';
 
-
-
 class login3 extends StatefulWidget {
   @override
   State<login3> createState() => _login3();
 }
-
 class _login3 extends State<login3> {
 
   TextEditingController emailController =  TextEditingController();
   TextEditingController passController =  TextEditingController();
-
-
 void login(){
   context.read<FirebaseAuthMethods>().loginWithEmail(
       email: emailController.value.text.trim(),
       password: passController.value.text.trim(),
       context: context);
-
 }
-
-
   @override
   Widget build(BuildContext context) {
-
-
     return Container(
       height: 584,
       width: MediaQuery.of(context).size.width,

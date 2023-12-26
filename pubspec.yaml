@@ -16,7 +16,6 @@ dependencies:
   firebase_auth: ^4.9.0
   cloud_firestore: ^4.9.1
   equatable: ^2.0.5
-  widget_with_codeview: ^3.1.0
   flutter_highlighter: ^0.1.1
   http: ^1.1.0
   archive: ^3.4.2
@@ -24,7 +23,7 @@ dependencies:
   settings_ui: ^2.0.2
   choice: ^2.0.0
   shared_preferences: ^2.2.2
-  google_sign_in: ^6.2.0
+#  google_sign_in: ^6.2.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

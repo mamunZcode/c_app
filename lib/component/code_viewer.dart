@@ -11,9 +11,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class CodeViewer extends StatefulWidget {
   String fileName;
-
   CodeViewer({super.key, required this.fileName});
-
   @override
   State<CodeViewer> createState() => _CodeViewerState();
 }

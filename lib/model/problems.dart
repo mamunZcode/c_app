@@ -6,11 +6,8 @@ class Problems {
       this._chapters = chapters;
     }
   }
-
   List<Chapters>? get chapters => _chapters;
-
   set chapters(List<Chapters>? chapters) => _chapters = chapters;
-
   Problems.fromJson(Map<String, dynamic> json) {
     if (json['chapters'] != null) {
       _chapters = <Chapters>[];
@@ -19,7 +16,6 @@ class Problems {
       });
     }
   }
-
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this._chapters != null) {
@@ -28,14 +24,12 @@ class Problems {
     return data;
   }
 }
-
 class Chapters {
   String? _id;
   String? _title;
   String? _primaryColor;
   String? _secondaryColor;
   List<Questions>? _questions;
-
   Chapters(
       {String? id,
       String? title,
